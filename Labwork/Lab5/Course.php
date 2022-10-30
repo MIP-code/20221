@@ -35,7 +35,6 @@ function setCourseDescription($courseDescription){
 
 
 
-
 function getGrade(){
     return $this->grade;
 }
