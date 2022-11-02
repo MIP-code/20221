@@ -14,13 +14,26 @@
 <?php
 include("Course.php");
 
-$courseOne= new Course("CIS 201","Web Design","Building websites","A+");
+$courseOne= new Course();
+$courseOne->setCourseCode("CIS 201");
+$courseOne->setCourseName("Web design");
+$courseOne->setCourseDescription("Build websites");
+$courseOne->setGrade("A+");
 
-$courseTwo= new Course("CIS 221","Database","Building databases","A");
+$courseTwo= new Course();
+$courseTwo->setCourseCode("CIS 221");
+$courseTwo->setCourseName("Database");
+$courseTwo->setCourseDescription("Build databases");
+$courseTwo->setGrade("A");
 
-$courseThree= new Course("CIS 202", "Data Structures","Learning about he concepts and algorithms of data","A");
+$courseThree= new Course();
+$courseThree->setCourseCode("CIS 202");
+$courseThree->setCourseName("Data Structure");
+$courseThree->setCourseDescription("Learning about algorthims");
+$courseThree->setGrade("A");
 
-$myArray=array($courseOne,$courseTwo,$courseThree);
+
+$myArray=array($courseOne, $courseTwo, $courseThree);
 
 
 echo"<table border = '1' width='500'>";
