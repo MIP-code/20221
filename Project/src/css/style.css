@@ -1,0 +1,28 @@
+body {
+    background: #0c0c0c;
+}
+
+
+
+.brand a {
+    margin-left: 10%;
+}
+
+.headerMessage {
+    margin-left: 36%;
+    text-align: center;
+    color: white;
+    background-color: #262626;
+    display: inline;
+    border-radius: 10px;
+}
+
+.card1 {
+    margin-left: 40%;
+    margin-top: 8%;
+}
+
+.card2 {
+    margin-right: 40%;
+    margin-top: 5%;
+}

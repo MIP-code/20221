@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "..\\..\\..\\..\\..\\Users\\mojab\\Documents\\GitHub\\MyGame\\GameFiles"
+	},
+	{
+		"path": "..\\..\\..\\..\\..\\Users\\mojab\\Documents\\GitHub\\CIS201"
+	},
+	{
+		"path": "..\\.."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "CIS201"
+  }
+}
