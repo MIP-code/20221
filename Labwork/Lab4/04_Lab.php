@@ -34,6 +34,9 @@ echo"<br>";
 echo"<br>";
 
 echo "I am looking for ".$myArray[0][2]." ".$myArray[0][0]." with ".$myArray[1][1]." ".$myArray[1][0]." and ".$myArray[2][2]." ".$myArray[2][0];
+
+
+
 ?>
 </body>
 </html>
