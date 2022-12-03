@@ -19,7 +19,7 @@
         <p>We decided to make a JIM website</p>
     </div>
 
-    <h2 class="team" >Our Team</h2>
+    <h2 class="team">Our Team</h2>
     <div class="row">
         <div class="column">
             <div class="card">
