@@ -16,6 +16,7 @@
 
 
 
+ 
 
 $query = mysqli_query($con, "INSERT INTO 06_lab (F_name, L_name, S_id, Major) VALUES('Alaa', 'ez', 202011068, 'SWE')");
 

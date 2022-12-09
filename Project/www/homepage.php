@@ -16,7 +16,7 @@
     <div class="about-section">
         <h1>About Us Page</h1>
         <p>This website represents our first time working in a team to develope a single website by sharing one git repository and also using PHP, SQL, Bootstrap.</p>
-        <p>We decided to make a JIM website</p>
+        <p>We decided to make a GYM website</p>
     </div>
 
     <h2 class="team">Our Team</h2>
