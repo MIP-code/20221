@@ -31,12 +31,12 @@
         <a href="register.php" class="register">Register</a>
       </div>
 
-      <a class="btn__submit" href="#">
+      <a class="btn__submit" href="homepage.php">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        Submit
+        <input type="submit" value=" "> Submit </input>
 
       </a>
     </form>
