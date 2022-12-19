@@ -23,7 +23,7 @@ if(!$connection){
 
    if($result){
       if(mysqli_num_rows($result) > 0){
-         session_star();
+         session_start();
          $result_rows = mysqli_fetch_row($result);
          $_SESSION['id']=$result_rows[0];
          header("location: ../www/welcome.php");
