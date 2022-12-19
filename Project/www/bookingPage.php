@@ -19,7 +19,7 @@
   <div class="input-group-prepend">
     <label class="input-group-text" for="inputGroupSelect01">Trainer</label>
   </div>
-  <form method="GET" action="">
+  <form method="POST" action="">
   <select class="custom-select" id="inputGroupSelect01">
     <option selected>Choose a trainer</option>
     <option value="1">Jeff</option>
@@ -36,7 +36,7 @@
   <div class="input-group-prepend">
     <label class="input-group-text" for="inputGroupSelect01">Day</label>
   </div>
-  <form method="GET" action="">
+  <form method="POST" action="">
   <select class="custom-select" id="inputGroupSelect01">
     <option selected>Choose a day</option>
     <option value="1">Sunday</option>
@@ -56,7 +56,7 @@
   <div class="input-group-prepend">
     <label class="input-group-text" for="inputGroupSelect01">Time</label>
   </div>
-  <form method="GET" action="">
+  <form method="POST" action="">
   <select class="custom-select" id="inputGroupSelect01">
     <option selected>Choose a time</option>
     <option value="1">1:00pm - 3:00pm </option>

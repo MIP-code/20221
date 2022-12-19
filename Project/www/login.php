@@ -15,28 +15,28 @@
 <body>
   <div class="login-box">
     <h2>Login</h2>
-    <form action="index.php" method="post">
+    <form action="../src/php/login_action.php" method="post">
 
       <div class="user-box">
-        <input type="text" name="" required="">
+        <input type="text" name="username" >
         <label>Username</label>
       </div>
 
       <div class="user-box">
-        <input type="password" name="" required="">
+        <input type="password" name ="password">
         <label> Password</label>
       </div>
 
       <div>
-        <a href="register.php" class="register">Register</a>
+        <a href="register.php" class="register">Don't have an account? Register</a>
       </div>
 
-      <a class="btn__submit" href="homepage.php">
+      <a class="btn__submit" href="welcome.php">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        <input type="submit" value=" "> Submit </input>
+        <input type="submit" name="submitBtn"> Login </input>
 
       </a>
     </form>

@@ -2,7 +2,7 @@
   $Host_IP="localhost";
   $username="MJ";
   $password="1234";
-  $database="Lab_db";
+  $database="gym";
 
 
   $con = mysqli_connect($Host_IP, $username, $password, $database);
@@ -18,7 +18,7 @@
 
  
 
-$query = mysqli_query($con, "INSERT INTO 06_lab (F_name, L_name, S_id, Major) VALUES('Alaa', 'ez', 202011068, 'SWE')");
+$query = mysqli_query($con, "INSERT INTO user_profile (first_name, last_name, phone, u_id) VALUES('Layla', 'Jamal', 055444445, '2')");
 
 echo "<br>";
 if($query){

@@ -4,34 +4,37 @@ include('../php/db_login.php');
 
 
 
-session_start();
-   
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-   // username and password sent from form 
-   
-   $username = mysqli_real_escape_string($db,$_POST['username']);
-   $password = mysqli_real_escape_string($db,$_POST['password']); 
-   
-   $validate = "SELECT * FROM information WHERE username = '$username' and passcode = '$password'";
-   $login = mysqli_query($connection, $validate);
-   $row = mysqli_fetch_array($connection, MYSQLI_ASSOC);
-   $active = $row['active'];
-   
-   $count = mysqli_num_rows($connection);
-   
-   // If result matched $username and $password, table row must be 1 row
-     
-   if($count == 1) {
-      session_register("username");
-      $_SESSION['login_user'] = $username;
-      
-      header("location: www/homepage.php");
-   }else {
-      $error = "Your Login Name or Password is invalid";
-   }
+if(!$connection){
+   echo "Error: ". mysqli_connect_errno();
+   echo "<br>";
+   echo "Error: ". mysqli_connect_error();
+   exit;
+
 }
+   
 
+   
+   $username = $_POST['username'];
+   $password = $_POST['password']; 
+   
+  
+   $query = "SELECT * FROM user_account WHERE user_name ='$username' AND password = '$password'";
+   $result = mysqli_query($connection, $query);
 
+   if($result){
+      if(mysqli_num_rows($result) > 0){
+         session_star();
+         $result_rows = mysqli_fetch_row($result);
+         $_SESSION['id']=$result_rows[0];
+         header("location: ../www/welcome.php");
+      }else{
+         echo "Wrong Userame or Password!";
+      }
+   }else{
+      echo (mysqli_connect_error($connection));
+   }
+
+   mysqli_close($connection);
 
 
 
