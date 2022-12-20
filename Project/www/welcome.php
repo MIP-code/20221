@@ -8,48 +8,36 @@
     <title>Welcome </title>
     <?php
 
-    session_start();
       include('index.php');
+      include('../src/php/db_login.php');
+  $username = $_SESSION['username'];
+    $password = $_POST['password']; 
 
-      include('../php/db_login.php');
+    session_start();
+      if(isset($_SESSION['username'])){
+       
+         echo "<h1>Welcome ".$_SESSION['username']."</h1>";
 
+         echo "<a href='booking.php'>Book now</a><br>";
 
+         echo "<br><a href='logout.php'><input type=button value=logout name=logout></a>";
 
-
-
-      if(!isset($_SESSION['id'])){
-         die("<p> Please <a href = \"login.php\">login</a></p>");
-      }
-
-
-      
-if(!$connection){
-   echo "Error: ". mysqli_connect_errno();
-   echo "<br>";
-   echo "Error: ". mysqli_connect_error();
-   exit;
-
-}
-$user_id = $_SESSION['id'];
-$query = "SELECT * FROM user_profile WHERE u_id ='$user_id'";
-
-$result = mysqli_query($connection, $query);
-
-   if($result){
-      if(mysqli_num_rows($result) > 0){
-         $resultrows= mysqli_fetch_row($result);
-         echo "Welcome ".$resultrows[1]." ".$resultrows[2];
       }else{
-         echo "make a profile";
+         if($_POST['username']==$username && $_POST['password']==$password){
+            $_SESSION['username']=$username;
+
+            echo "<script>location.href='welcome.php'</script>";
+         }else{
+            echo "<script>alert('username or password wrong')</script>";
+            echo "<script>location.href='login.php'</script>";
+
+         }
       }
 
-   }else{
-      echo "an error occured";
-   }
+
     
     ?>
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
- <link rel="stylesheet" href="../src/css/homepage.css">
 </head>
 <body>
       

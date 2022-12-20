@@ -15,7 +15,7 @@
 <body>
   <div class="login-box">
     <h2>Login</h2>
-    <form action="../src/php/login_action.php" method="post">
+    <form action="welcome.php" method="post">
 
       <div class="user-box">
         <input type="text" name="username" >
@@ -31,12 +31,12 @@
         <a href="register.php" class="register">Don't have an account? Register</a>
       </div>
 
-      <a class="btn__submit" href="welcome.php">
+      <a class="btn__submit" href="#">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        <input type="submit" name="submitBtn"> Login </input>
+        <input type="submit" name="submitBtn" value="Login">  </input>
 
       </a>
     </form>

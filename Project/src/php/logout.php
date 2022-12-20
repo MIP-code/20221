@@ -1,7 +1,13 @@
 <?php
    session_start();
    
-   if(session_destroy()) {
-      header("Location: login.php");
+   if(isset($_SESSION['username'])) {
+
+      session_destroy();
+
+      echo "<script>location.herf='login.php'</script>";
+   }else{
+      echo "<script>location.herf='login.php'</script>";
+
    }
 ?>

@@ -7,9 +7,10 @@ $userName =  $_POST['username'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $password = $_POST['password'];
+$confirmPass = $_POST['Cpassword'];
 
-$insert = "INSERT INTO information (first_name, last_name, username, email, phone, password) 
-        VALUES ('$first_name', '$last_name', '$userName', '$email', '$phone', '$password')";
+$insert = "INSERT INTO user_account (firstname, lastname, username, email, phone, password, confim_password) 
+        VALUES ('$first_name', '$last_name', '$userName', '$email', '$phone', '$password', '$confirmPass')";
 $register = mysqli_query($connection, $insert);
 
 if ($register) {

@@ -16,7 +16,7 @@
 <body>
   <div class="login-box">
     <h2>Register</h2>
-    <form action="../src/php/login_action.php" method="post">
+    <form action="../src/php/register_action.php" method="post">
 
       <div class="user-box">
         <input type="text" required id="firstname" name="firstname">
@@ -63,7 +63,7 @@
         <span></span>
         <span></span>
         <span></span>
-        <input type="submit" value=" "> Submit </input>
+        <input type="submit" value="Register"> </input>
 
       </a>
     </form>

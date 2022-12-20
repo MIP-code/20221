@@ -18,7 +18,7 @@ if(!$connection){
    $password = $_POST['password']; 
    
   
-   $query = "SELECT * FROM user_account WHERE user_name ='$username' AND password = '$password'";
+   $query = "SELECT * FROM user_account WHERE username ='$username' AND password = '$password'";
    $result = mysqli_query($connection, $query);
 
    if($result){
