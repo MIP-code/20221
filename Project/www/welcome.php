@@ -10,29 +10,28 @@
 
       include('index.php');
       include('../src/php/db_login.php');
-  $username = $_SESSION['username'];
-    $password = $_POST['password']; 
+      
+      $username = $_POST['username'];
+      $password = $_POST['password']; 
 
     session_start();
-      if(isset($_SESSION['username'])){
-       
-         echo "<h1>Welcome ".$_SESSION['username']."</h1>";
-
-         echo "<a href='booking.php'>Book now</a><br>";
-
-         echo "<br><a href='logout.php'><input type=button value=logout name=logout></a>";
+         if (isset($_SESSION['username'])){
+            echo "<h1>Welcome, ".$_POST['username']."</h1>";
+            echo "<a href='booking.php'>Book now</a><br>";
+            echo "<br><a href='../src/php/logout.php'><input type=button value=logout name=logout></a>";
 
       }else{
-         if($_POST['username']==$username && $_POST['password']==$password){
-            $_SESSION['username']=$username;
+         if($_SESSION['username']==$username && $_SESSION['password']==$password){
+         $_SESSION['username'] = $username;
+         echo "<script>location.href='welcome.php'</script>";
+      }else{
+         echo "<script>alert('Username or Password is wrong')</script>";
+         echo "<script>location.href='login.php'</script>";
 
-            echo "<script>location.href='welcome.php'</script>";
-         }else{
-            echo "<script>alert('username or password wrong')</script>";
-            echo "<script>location.href='login.php'</script>";
-
-         }
       }
+
+      }
+   
 
 
     
