@@ -7,7 +7,7 @@ if (isset($_POST['name'])){
     $plan = $_POST['plan'];
 
     $query = "INSERT INTO `class` (`trainer_name`, `plan_duration`) VALUES ('$trainer', '$plan')";
-    $test = "SELECT `number_of_trainees` FROM `g` WHERE `trainer_name` = $trainer AND `plan` = $plan";
+    
 
     mysqli_query($connection, $query);
     header("Refresh: 3; url= ../../www/homepage.php", true, 301);
